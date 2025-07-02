@@ -21,6 +21,7 @@ time, mark, audio, video {
 
 body{
     font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
 }
 .container-xl{
     max-width: 1541px;
@@ -34,17 +35,8 @@ body{
     margin: 0 auto;
     padding: 0 24px;
 }
-
-
 .distance {
-    margin: 80px 0;
-}
-
-.container {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 24px;
+    margin: 80px auto;
 }
 
 @media (max-width: 1024px) {
@@ -69,6 +61,97 @@ body{
     --color-light-gray: #8C8F96;
     --color-hover-btn: #00BDFF;
     --color-blue: #49D0FF;
+    --color-whith: #ffff;
 }
+
+/*start header*/
+.header {
+    min-height: 100px;
+    background-color: var(--color-black);
+}
+.header .header_logo{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 33px;
+    padding-bottom: 32px;
+}
+.header .header_logo .menu{
+    display: flex;
+    color: var(--color-whith);
+    column-gap: 48px;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 600;
+    align-items: center;
+}
+.header .header_logo .menu .menu__item{
+    position: relative;
+    padding-right: 20px;
+}
+
+.menu__item--has-dropdown::after {
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 30%;
+    transform: translateY(-50%) rotate(45deg);
+    border: solid var(--color-dark-gray);
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    pointer-events: none;
+}
+
+.header .header_info {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+.header .header_info .header-icons{
+    display: flex;
+    column-gap: 32px;
+}
+.header .header_info .header-blue{
+    min-height: 18px;
+    min-width: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    background-color: var(--color-blue);
+    border-radius: 50%;
+    color: var(--color-whith);
+    font-weight: var(--font-medium);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .header_info span{
+    font-weight: var(--font-medium);
+    font-size: 13px;
+    color: var(--color-light-gray);
+}
+/*@media (max-width: 1400px) {*/
+/*    .header .header_logo .menu{*/
+/*        display: none;*/
+/*    }*/
+/*}*/
+
+/*end header*/
+/*start main section one*/
+.main .one{
+    min-height: 760px;
+}
+.main .one .fff{
+    background: url("images/bc7f269b07832eec670607c5ff04920b4f199ba8.jpg");
+    height: 631px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+
+}
+
+
+
+
+
 
 
